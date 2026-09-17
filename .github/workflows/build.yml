@@ -12,6 +12,11 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Setup App Icon
+        run: |
+          mkdir -p app/src/main/res/mipmap-xxhdpi
+          cp ic_launcher.png app/src/main/res/mipmap-xxhdpi/ic_launcher.png
+
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
